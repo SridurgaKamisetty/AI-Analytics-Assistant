@@ -1,11 +1,17 @@
-def main():
-    print("=" * 50)
-    print("Enterprise AI Analytics Assistant")
-    print("Version 0.1")
-    print("=" * 50)
-    print("Welcome!")
-    print("AI Analytics Bootcamp")
-    print("=" * 50)
+from ai.llm import ask_ai
 
-if __name__ == "__main__":
-    main()
+print("=" * 50)
+print("Enterprise AI Chat Assistant")
+print("=" * 50)
+
+while True:
+
+    question = input("\nYou : ")
+
+    if question.lower() == "exit":
+        break
+
+    answer = ask_ai(question)
+
+    print("\nAI :")
+    print(answer)
